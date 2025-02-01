@@ -1,0 +1,95 @@
+/* Navbar container */
+nav {
+    width: 100%;
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Navbar title */
+nav h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Navbar links container */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar list item */
+nav li {
+    margin: 0 20px;
+}
+
+/* Navbar link styles */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for links */
+nav a:hover {
+    background-color: #00bfff;
+    color: #fff;
+}
+
+/* Hamburger menu button for mobile */
+.menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #00bfff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide the menu by default */
+        margin-top: 15px;
+    }
+
+    nav ul.open {
+        display: flex; /* Display menu when open */
+    }
+
+    nav li {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    nav a {
+        padding: 12px 20px;
+        text-align: left;
+    }
+
+    .menuToggle {
+        display: block;
+    }
+}
